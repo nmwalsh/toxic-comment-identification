@@ -55,16 +55,19 @@ Before proceeding, your repository should look as follows:
 
 **Setting up the environment:**
 
+`Explicit containerized env setup instructions TBD`
+
 - Download Docker Image
+    - [Kaggle Python Image](https://hub.docker.com/r/kaggle/python/)
 - Build container
 - Launch Jupyter Notebook
 - Open `toxic-comment-identification.ipynb`
 
 **Running the notebook:**
 
-- 
 - Run cells from top to bottom.
 - For predicting on your own data, add your `.csv` dataset to the `input/` directory, or directly mount them to the container.
+- For inference only, start at `Part 2: Using the saved model to predict on new data`
 
 ## Things to watch out for:
 1. The GloVe embeddings will be loaded into memory before the training, requiring around 6 GB of available RAM. If the RAM is not available on your system, you will likely receive a generic python kernel crash error after a long-running cell.
